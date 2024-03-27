@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">snake</string>
-    <string name="tap_to_play">Tap To Play!</string>
+    <string name="Touch_to_play">Tap To Play!</string>
 </resources>
