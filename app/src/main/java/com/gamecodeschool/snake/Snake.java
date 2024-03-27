@@ -14,10 +14,10 @@ public class Snake implements GameObject, Movable, Drawable{
     private static final int OUT_OF_BOUNDS = -1;
     private static final int NEW_SEGMENT_POSITION = -10;
     private static final int HALF = 2;
-    private ArrayList<Point> segmentLocations;
-    private int mSegmentSize;
-    private Point mMoveRange;
-    private int halfWayPoint;
+    private final ArrayList<Point> segmentLocations;
+    private final int mSegmentSize;
+    private final Point mMoveRange;
+    private final int halfWayPoint;
     private enum Heading {UP, RIGHT, DOWN, LEFT}
     private Heading heading = Heading.RIGHT;
     private Bitmap mBitmapHeadRight;
@@ -86,10 +86,7 @@ public class Snake implements GameObject, Movable, Drawable{
 
     boolean detectDeath() {
         Point head = segmentLocations.get(0);
-        if (isOutOfBounds(head) || isEatingItself(head)) {
-            return true;
-        }
-        return false;
+        return isOutOfBounds(head) || isEatingItself(head);
     }
 
     private boolean isOutOfBounds(Point head) {
