@@ -9,7 +9,7 @@ import android.graphics.Point;
 import java.util.Random;
 
 public class Apple implements GameObject, Drawable {
-    private static final int OFF_SCREEN_X = -9;
+    private static final int OFF_SCREEN_X = -10;
 
     private Point location = new Point();
     private Point mSpawnRange;
